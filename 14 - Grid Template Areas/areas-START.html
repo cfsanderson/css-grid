@@ -10,6 +10,10 @@
 
 <body>
   <div class="container">
+    <h1 class="header item">
+      I'm the H1
+      <p class="inner">Subtitle and/or descriptive text.</p>
+    </h1>
     <div class="item item1">
       <p>I'm Sidebar #1</p>
     </div>
@@ -29,7 +33,44 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 1fr 10fr  1fr;
+      grid-template-rows: 150px 300px 150px 100px;
+      grid-template-areas:
+        "header     header    header"
+        "sidebar-1  content   sidebar-2"
+        "sidebar-1  content   sidebar-2"
+        "footer     footer    footer"
     }
+
+    .header {
+      grid-area: header;
+    }
+
+    .item1 {
+      grid-area: sidebar-1;
+    }
+
+    .item2 {
+      grid-area: content;
+    }
+
+    .item3 {
+      grid-area: sidebar-2;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-rows: 150px 300px 150px 150px;
+        grid-template-areas:
+          "header     header    header"
+          "content    content   content"
+          "sidebar-1  sidebar-1 sidebar-2"
+          "footer     footer    footer"
+      }
   </style>
 </body>
 
