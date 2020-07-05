@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
-  <title>Placing Grid Items!</title>
+  <title>Spanning & Placing Cardio!</title>
 </head>
 
 <body>
@@ -18,7 +18,6 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -47,29 +46,13 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(30, 1fr);
     }
-    .poop {
-      background: #BADA55;
-      /*
-      grid-column-start: 2;
-      grid-column-end: 5;
-      OR.....
-      */
-      /*
-      grid-column: 2 / 5;
-      OR.....
-      */
-      grid-column: 2 / span 5;
-    }
-    .item9 {
-      grid-column: 1 / -1;
-      /* spans 100% width */
-    }
-    .item11 {
+    /* Make Item 5 double span 2 cols and rows */
+    .item5 {
       grid-column: span 2;
-      grid-row: 1 / -1;
+      grid-row: span 2;
     }
   </style>
 </body>

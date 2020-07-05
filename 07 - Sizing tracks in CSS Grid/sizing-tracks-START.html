@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
-  <title>Sizing Tracks in CSS Grid!</title>
+  <title>07 Sizing Tracks in CSS Grid!</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <div class="item">9</div>
     <div class="item">10</div>
     <div class="item">11</div>
-    <div class="item">12</div>
+    <div class="item">Caleb Frost Sanderson</div>
     <div class="item">13</div>
     <div class="item">14</div>
     <div class="item">15</div>
@@ -31,6 +31,18 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      border: 8px solid var(--yellow);
+      height: 600px; /* for `fr` to work on rows, needs height */
+      /* grid-template-columns: 200px 100px 1fr; */
+      /* OR */
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+      /* OR.... */
+      /* grid-template-columns: repeat(4, 1fr); */
+      /* OR.... */
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+      /* OR.... */
+      grid-template-columns: 1fr 1fr auto auto;
+      grid-template-rows: 1fr 1fr 1fr auto;
     }
   </style>
 </body>
