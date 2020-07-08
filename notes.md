@@ -55,6 +55,16 @@ Able to automoatically fill spaces like a photo gallery.
 
 [CSS Tricks guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
+- `justify-*` aligns with the row (x) axis
+- `align-*` aligns with the column (y) axis
+
+Each uses either `start`, `end`, `stretch`, or `center`
+
+- `justify-content`
+- `align-content`
+
+
+
 ## 18 - Re-ordering Grid Items
 
 ## 19 - Nesting Grid with Album Layouts
