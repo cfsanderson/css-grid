@@ -64,12 +64,103 @@ Each uses either `start`, `end`, `stretch`, or `center`
 - `align-content`
 
 
-
 ## 18 - Re-ordering Grid Items
 
+```css
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.content {
+  grid-column: 1 / -1;  
+  order: 3;
+}
+
+.logo {
+  grid-column: span 2;
+  order: 2;
+}
+
+.nav {
+  grid-column: span 8;
+  order: 1;
+}
+
+@media (max-width: 700px) {
+  .content {
+    grid-column: 1 / -1;  
+    order: 3;
+  }
+
+  .logo {
+    grid-column: 1 / -1;  
+    order: 1;
+  }
+
+  .nav {
+    grid-column: 1 / -1;  
+    order: 2;
+  }
+}
+```
+
 ## 19 - Nesting Grid with Album Layouts
+I did a little overachieving with this one. This creates an album layout with a left side "featured" list that is a little bit bigger.
+
+```css
+.all__albums {
+      display: flex;
+      flex-direction: row;
+    }
+    .albums1 {
+      width: 20%;
+      padding: 0 50px 0 0;
+
+    }
+
+    .alb {
+      background: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0 0 20px 0;
+      margin: 0 0 20px 0;
+    }
+
+    .alb .album__artwork { 
+      width: 100%;
+      padding: 0 0 10px 0;
+    } 
+
+    .alb .album__details {
+      padding: 10px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .albums2 {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .album {
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+      grid-gap: 20px;
+    }
+
+    .album__artwork {
+      width: 100%;
+    }
+```
 
 ## 20 - CSS Grid Image Gallery
+
 
 ## 21 - Flexbox vs CSS Grid
 
