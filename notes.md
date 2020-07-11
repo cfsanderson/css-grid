@@ -107,7 +107,31 @@ Each uses either `start`, `end`, `stretch`, or `center`
 ```
 
 ## 19 - Nesting Grid with Album Layouts
-I did a little overachieving with this one. This creates an album layout with a left side "featured" list that is a little bit bigger.
+Basic version is a set of album covers (cards) with a title and description to the right. Here is the result:
+```css
+    .albums {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .album {
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+      grid-gap: 20px;
+    }
+
+    .album__artwork {
+      width: 100%;
+    }
+```
+
+I did a little overachieving with this one and created an album layout with a left side "featured" list that is a little bit bigger. I need to work on making the right side flow better though.
 
 ```css
 .all__albums {
