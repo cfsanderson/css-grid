@@ -184,7 +184,7 @@ I did a little overachieving with this one and created an album layout with a le
 ```
 
 ## 20 - CSS Grid Image Gallery
-
+Craziness
 
 ## 21 - Flexbox vs CSS Grid
 
