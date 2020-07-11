@@ -187,6 +187,7 @@ I did a little overachieving with this one and created an album layout with a le
 Craziness
 
 ## 21 - Flexbox vs CSS Grid
+I made copies of original START.html files 
 
 ## 22 - Recreating Codepen
 
