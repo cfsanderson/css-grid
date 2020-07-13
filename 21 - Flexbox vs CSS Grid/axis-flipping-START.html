@@ -31,10 +31,29 @@
     <div class="item">8</div>
     <div class="item">9</div>
     <div class="item">10</div>
-
   </div>
 
   <style>
+  .flipper {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit , minmax(50px, 1fr));
+  }
+
+  .flip {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  <!-- .flip { -->
+  <!--   grid-template-columns: 1fr 1fr; -->
+  <!-- } -->
+
+  .flip .item {
+    width: 100%;
+  }
+
   </style>
 </body>
 

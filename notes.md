@@ -189,6 +189,41 @@ Craziness
 ## 21 - Flexbox vs CSS Grid
 I made copies of original START.html files 
 
+Flexbox wins here (flex-on-item-START.html):
+```css
+.controls {
+  margin: 200px 0;
+  display: flex;
+  align-items: center;
+}
+
+.scrubber {
+  background: #BADA55;
+  height: 10px;
+  min-width: 100px;
+  border-radius: 10px;
+  flex: 1;
+}
+```
+
+to achieve the same thing with grid you would have to use...
+```css
+.controls {
+  margin: 200px 0;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto auto;
+}
+
+.scrubber {
+  background: #BADA55;
+  height: 10px;
+  min-width: 100px;
+  border-radius: 10px;
+}
+```
+but if any of the buttons change, you are screwed.
+
 ## 22 - Recreating Codepen
 
 ## 23 - Bootstrappy Grid with CSS Variables
